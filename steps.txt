@@ -1,0 +1,9 @@
+sudo yum install java nodejs npm
+====Jenkins=====
+echo "Deploying app"
+./mvnw spring-boot:run
+cd frontend
+npm install
+npm build
+npm start
+echo "App deployment done"
