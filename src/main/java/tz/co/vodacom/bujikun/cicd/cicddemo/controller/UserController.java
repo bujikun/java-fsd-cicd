@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tz.co.vodacom.bujikun.cicd.cicddemo.model.User;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,10 +20,11 @@ public class UserController {
                     new User("Clark", "Kent", 23),
                     new User("Bruce", "Wayne", 56),
             });
-    
+
     @GetMapping
     public List<User> getAllUsers(){
         return UserController.users;
     }
+
 
 }
