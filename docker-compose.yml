@@ -1,0 +1,27 @@
+version: "3.9"
+#individual services in isolated containers
+services:
+  backend:
+    container_name: backend_app
+    build:
+      context: .
+    ports:
+      - "9095:9090"
+    networks:
+      - app-network
+    restart: on-failure
+    tty: true
+
+  frontend:
+    container_name: frontend_app
+    build:
+      context: ./frontend
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+networks:
+  app-network:

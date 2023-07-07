@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost"})
 public class UserController {
     private static final List<User> users = Arrays.asList(
             new User[]{new User("John", "Doe", 45),

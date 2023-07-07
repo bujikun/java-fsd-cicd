@@ -7,3 +7,15 @@ npm install
 npm build
 npm start
 echo "App deployment done"
+
+
+=========
+echo "Deploying app"
+cd frontend
+pwd
+npm install
+npm run build
+docker build -t react-app .
+docker run -d -p 3000:80 react-app
+./mvnw spring-boot:run
+echo "App deployment done"

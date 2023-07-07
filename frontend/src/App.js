@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch("http://localhost:9090/api/users");
+      const response = await fetch("http://localhost:9095/api/users");
       const data = await response.json();
       console.log(data);
       setUsers(data);
