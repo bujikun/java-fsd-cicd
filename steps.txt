@@ -19,3 +19,12 @@ docker build -t react-app .
 docker run -d -p 3000:80 react-app
 ./mvnw spring-boot:run
 echo "App deployment done"
+
+echo "Finished pulling containers now about to deploy containers"
+cd frontend
+npm install
+npm run build
+cd ../
+docker compose build
+docker compose up
+echo "Containers up and running"
