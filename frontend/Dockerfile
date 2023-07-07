@@ -1,5 +1,5 @@
 #Stage 1
-FROM node:17-alpine3.15 as builder
+FROM node:20-alpine3.18 as builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
